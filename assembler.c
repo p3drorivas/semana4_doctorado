@@ -6,7 +6,7 @@
 
 extern unsigned char memoria[]; // viene de cpu_simulator.c
 
-// Opcodes (deben coincidir con cpu_simulator.c)
+// Opcodes (deben coincidir con el contenido de cpu_simulator.c)
 #define OP_HALT  0
 #define OP_LOAD  1
 #define OP_ADD   2
@@ -100,7 +100,7 @@ int ensamblar_y_cargar(const char *file, int start_addr) {
             if (*s == '\0') continue;
         }
 
-        // parse instruction and operand (operand puede ser label o número)
+        //operand puede ser label o número
         char instr[64] = {0};
         char operand_str[128] = {0};
         int fields = sscanf(s, "%63s %127s", instr, operand_str);
@@ -153,3 +153,4 @@ int ensamblar_y_cargar(const char *file, int start_addr) {
     fclose(in);
     return 1;
 }
+
