@@ -1,4 +1,4 @@
-// c_to_asm.c  (traductor muy simple para asignaciones y OUTPUT)
+// c_to_asm.c  (traductor para asignaciones y OUTPUT)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -36,3 +36,4 @@ void traducir_C_a_ASM() {
     fclose(in);
     fclose(out);
 }
+
